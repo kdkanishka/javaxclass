@@ -12,13 +12,11 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
- * Created with IntelliJ IDEA.
- * User: kanishka
- * Date: 1/7/14
- * Time: 11:50 AM
- * To change this template use File | Settings | File Templates.
+ * Created with IntelliJ IDEA. User: kanishka Date: 1/7/14 Time: 11:50 AM To
+ * change this template use File | Settings | File Templates.
  */
 public class Base64FileSerializer implements Serializer {
+
     @Override
     public void serialize(Serializable serializable, File filePath) throws IOException {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
