@@ -1,4 +1,4 @@
 javaxclass
 ==========
 
-Examples published in http://javaxclass.blogspot.com
+Examples published on http://javaxclass.blogspot.com
