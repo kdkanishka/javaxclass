@@ -31,7 +31,7 @@ public class Main {
 
         serializeDefault(stud1);
         deserializeDefault(new File("data/stud_serialized_default"));
-        
+
         serializeBase64(stud1);
         deserialzieBase64(new File("data/stud_serialized_base64"));
     }
@@ -39,23 +39,26 @@ public class Main {
     private static void serializeDefault(Serializable serializable) throws IOException {
         Serializer serializer = new DefaultFileSerializer();
         serializer.serialize(serializable, new File("data/stud_serialized_default"));
-        System.out.println("Serialized.");
+        System.out.println("Serialized in default format.");
     }
 
     private static void deserializeDefault(File path) throws IOException, ClassNotFoundException {
         Serializer serializer = new DefaultFileSerializer();
         Student stud = (Student) serializer.deSerialize(path);
+        System.out.println("Deserialized default format.");
         System.out.println(stud.toString());
     }
 
     private static void serializeBase64(Serializable serializable) throws IOException {
         Serializer base64Serializer = new Base64FileSerializer();
         base64Serializer.serialize(serializable, new File("data/stud_serialized_base64"));
+        System.out.println("Serialized in base64 format.");
     }
 
     private static void deserialzieBase64(File path) throws IOException, ClassNotFoundException {
         Serializer serializer = new Base64FileSerializer();
         Student stud = (Student) serializer.deSerialize(path);
+        System.out.println("Deserialized base64 data.");
         System.out.println(stud.toString());
     }
 }
